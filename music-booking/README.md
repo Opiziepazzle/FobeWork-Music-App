@@ -1,94 +1,109 @@
-🎵 Music Booking API
-A RESTful API for booking music artists for events, managing artist profiles, and handling event listings.
-🚀 Overview
-This API allows users to:
+# 🎵 Music Booking API  
 
-📌 Manage artist profiles (Create, Read, Update, Delete).
+A RESTful API for booking music artists for events, managing artist profiles, and handling event listings.  
 
-🎤 List and manage events (CRUD operations).
+---
 
-🎟️ Book artists for events and manage bookings.
+## 🚀 Overview  
+This API allows users to:  
 
-🔐 Secure API endpoints with authentication.
+📌 Manage artist profiles (Create, Read, Update, Delete).  
+🎤 List and manage events (CRUD operations).  
+🎟️ Book artists for events and manage bookings.  
+🔐 Secure API endpoints with authentication.  
 
-📂 Features
-✅ Artist Management – Add, update, and remove artists from the platform.
-✅ Event Listings – Create events and assign artists.
-✅ Booking System – Users can book artists for events.
-✅ MongoDB Database – Data persistence for artists, events, and bookings.
-✅ Authentication (JWT) – Secure API endpoints.
-✅ Scalable & Well-Structured Code – Follows MVC architecture.
+---
 
-🛠️ Tech Stack
-Technology	Usage
-Node.js	Backend runtime
-Express.js	Web framework
-MongoDB	NoSQL database
-Mongoose	ORM for MongoDB
-JWT	Authentication
-Postman	API testing
+## 📂 Features  
+✅ **Artist Management** – Add, update, and remove artists from the platform.  
+✅ **Event Listings** – Create events and assign artists.  
+✅ **Booking System** – Users can book artists for events.  
+✅ **MongoDB Database** – Data persistence for artists, events, and bookings.  
+✅ **Authentication (JWT)** – Secure API endpoints.  
+✅ **Scalable & Well-Structured Code** – Follows MVC architecture.  
 
+---
 
-📜 API Documentation
-📌 Base URL: http://localhost:3000/
+## 🛠️ Tech Stack  
 
+| Technology  | Usage           |
+|------------|----------------|
+| Node.js    | Backend runtime |
+| Express.js | Web framework   |
+| MongoDB    | NoSQL database  |
+| Mongoose   | ORM for MongoDB |
+| JWT        | Authentication  |
+| Postman    | API testing     |
 
-1️⃣ User Endpoints 👤
-Method	Endpoint	Description
-POST	/users/signup	Register a new user
-body
-{
+---
 
-"email":"henry@gmail.com",
-"password":"lapadula",
-"name":"Henry Terry",
-"role": ['artist', 'host', 'admin']
+## 📜 API Documentation  
+📌 **Base URL:** `http://localhost:3000/`  
 
-}
+### 1️⃣ User Endpoints 👤  
 
+| Method | Endpoint        | Description |
+|--------|----------------|-------------|
+| POST   | `/users/signup` | Register a new user |
+|        | **Body:**       |  |
+|        | `{`            |  |
+|        | `"email": "henry@gmail.com",` |  |
+|        | `"password": "lapadula",` |  |
+|        | `"name": "Henry Terry",` |  |
+|        | `"role": ["artist", "host", "admin"]` |  |
+|        | `}`            |  |
+| POST   | `/users/login`  | Authenticate user & get token |
+|        | **Body:**       |  |
+|        | `{`            |  |
+|        | `"email": "henry@gmail.com",` |  |
+|        | `"password": "lapadula"` |  |
+|        | `}`            |  |
 
-POST	/users/login	Authenticate user & get token
-body
-{
+---
 
-"email":"henry@gmail.com",
-"password":"lapadula",
+### 2️⃣ Artist Endpoints 🎤  
 
-}
+| Method | Endpoint        | Description |
+|--------|----------------|-------------|
+| POST   | `/artists`      | Create an artist |
+| GET    | `/artists`      | Get all artists |
+| GET    | `/artists/:id`  | Get a single artist |
+| PUT    | `/artists/:id`  | Update an artist |
+| DELETE | `/artists/:id`  | Delete an artist |
 
+---
 
+### 3️⃣ Event Endpoints 🎭  
 
-2️⃣ Artist Endpoints 🎤
-Method	Endpoint	Description
-POST	/artists	Create an artist
-GET	/artists	Get all artists
-GET	/artists/:id	Get a single artist
-PUT	/artists/:id	Update an artist
-DELETE	/artists/:id	Delete an artist
+| Method | Endpoint        | Description |
+|--------|----------------|-------------|
+| POST   | `/events`       | Create an event |
+| GET    | `/events`       | Get all events |
+| GET    | `/events/:id`   | Get a single event |
+| PUT    | `/events/:id`   | Update an event |
+| DELETE | `/events/:id`   | Delete an event |
 
+---
 
-3️⃣ Event Endpoints 🎭
-Method	Endpoint	Description
-POST	/events	Create an event
-GET	/events	Get all events
-GET	/events/:id	Get a single event
-PUT	/events/:id	Update an event
-DELETE	/events/:id	Delete an event
+### 4️⃣ Booking Endpoints 🎟️  
 
+| Method | Endpoint        | Description |
+|--------|----------------|-------------|
+| POST   | `/bookings`     | Create a booking |
+| GET    | `/bookings`     | Get all bookings |
+| GET    | `/bookings/:id` | Get a single booking |
+| PUT    | `/bookings/:id` | Update a booking |
+| DELETE | `/bookings/:id` | Delete a booking |
 
-4️⃣ Booking Endpoints 🎟️
-Method	Endpoint	Description
-POST	/bookings	Create a booking
-GET	/bookings	Get all bookings
-GET	/bookings/:id	Get a single booking
-PUT	/bookings/:id	Update a booking
-DELETE	/bookings/:id	Delete a booking
+---
 
+## 🔧 Installation & Setup  
 
-🔧 Installation & Setup
-1. Clone the Repository
-git clone https://github.com/opiziepazzle/git.git
+### 1️⃣ Clone the Repository  
+```sh
+git clone https://github.com/opiziepazzle/music-booking.git
 cd music-booking
+
 
 
 2. Install Dependencies
