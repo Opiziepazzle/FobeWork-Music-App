@@ -1,0 +1,19 @@
+{
+  "name": "music-booking",
+  "version": "1.0.0",
+  "description": "🎵 Music Booking API\r A RESTful API for booking music artists for events, managing artist profiles, and handling event listings.\r 🚀 Overview\r This API allows users to:",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
